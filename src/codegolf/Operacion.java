@@ -11,8 +11,16 @@ public class Operacion {
 	}
 	
 	public int operaciones(int n) {
-		
-		return 1;
+		int operaciones=1;
+		int comparador=1;
+		while(n/comparador>1) {
+			comparador = multiplicar_por_2(comparador);
+			operaciones++;
+		}
+		while(n%comparador!=0) {
+			comparador = sumar_1(comparador);
+			operaciones++;
+		}
+		return operaciones;
 	}
-	
 }
